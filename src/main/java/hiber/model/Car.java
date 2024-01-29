@@ -1,10 +1,9 @@
 package hiber.model;
 
-import org.hibernate.boot.registry.selector.spi.StrategyCreator;
-
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "cars")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

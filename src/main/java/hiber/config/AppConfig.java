@@ -1,5 +1,6 @@
 package hiber.config;
 
+import hiber.model.Car;
 import hiber.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -47,13 +48,20 @@ public class AppConfig {
 
         factoryBean.setHibernateProperties(props);
         factoryBean.setAnnotatedClasses(User.class);
+        factoryBean.setAnnotatedClasses(Car.class);
+
         return factoryBean;
     }
+
 
     @Bean
     public HibernateTransactionManager getTransactionManager() {
         HibernateTransactionManager transactionManager = new HibernateTransactionManager();
         transactionManager.setSessionFactory(getSessionFactory().getObject());
+//        System.out.println("______\nAnnotated classes:");
+//        System.out.println(getSessionFactory().getMetadataSources().g);
+//        System.out.println("---");
         return transactionManager;
     }
+
 }
