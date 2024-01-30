@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="3a97a3fa-c30a-406b-ae69-bdc1e98cb6a9" name="2.2.1. spring_hibernate_pg_car_test" url="jdbc:postgresql://localhost:5433/Overridetech" driverClass="org.postgresql.Driver" />
+    </data-sources>
+  </component>
+</project>
